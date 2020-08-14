@@ -1,0 +1,19 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    # 应用程序名字
+    name: springcloud-customer
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      # 注册中心路径:如果服务中心设置了context-path要添加context-path路径
+      defaultZone: http://localhost:8081/springeureka/eureka
+feign:
+  # 断路器
+  hystrix:
+    enabled: true

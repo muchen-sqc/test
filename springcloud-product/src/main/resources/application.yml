@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    # 应用程序名字
+    name: springcloud-porduct
+  datasource: # 数据源
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: sqc
+    password: 123
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      # 注册中心路径:如果服务中心设置了context-path要添加context-path路径
+      defaultZone: http://localhost:8081/springeureka/eureka

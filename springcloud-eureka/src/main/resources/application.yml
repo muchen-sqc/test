@@ -1,0 +1,22 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /springeureka
+
+spring:
+  application:
+    name: springcloud-eureka
+
+eureka:
+  instance:
+    # 域名
+    hostname: localhost
+  # 客户端
+  client:
+    # 禁用注册客户端：Eureka注册中心既可以作为服务端又可以作为客户端，默认会自动注册客户端,不注册客户端，避免自己注册自己
+    register-with-eureka: false
+    fetch-registry: false
+    # 注册中心路径
+    service-url:
+      # service-url得取值是Map，没有提示信息得
+     defalutZone:  http://${eureka.instance.hostname}:${server.port}/eureka

@@ -20,7 +20,7 @@ public class ClassesController {
     @ResponseBody
     public List<Course> findAll(){
         System.out.println("findAll");
-        System.out.println("1");
+        System.out.println("2");
         return cd.findAll();
     }
     @RequestMapping("selectAll")
